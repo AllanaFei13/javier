@@ -1,40 +1,107 @@
 <!DOCTYPE html>
-<html lang=”en”>
-
+<html>
 <head>
-    <meta charset=”UTF-8”>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
-    <title>Document</title>
-    <style>
-        body {
-            background-color: violet;
-            color: purple;
-            flex-direction: column;
-        }
-
-
-        @media screen and (max-width:1200px) {
-            body {
-                background-color: violet;
-                color: black;
-            }
-        }
-
-        @media screen and (max-width:800px) {
-            body {
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-    </style>
+    <link rel="sytlesheet" href="css/Qweries.css">
+    <title>CSS Media Quaries</title>
 </head>
 
-<body>
-    <h1>Home</h1>
-    <h1>About Us</h1>
+<style>
+  .flex-container {
+    display: flex;
+    background-color: rgb(235, 137, 137);
+    justify-content: flex-end;
+    flex-direction: column;
 
-    <h1>Contact Us</h1>
+  }
+  .flex-container > div {
+    background-color: #752865;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media screen and (max-width: 800px){
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+body {
+    background-color: rgb(226, 211, 144);
+
+}
+.flex-container {
+    display: flex;
+    background-color: rgb(156, 75, 202);
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.flex-container > div {
+    background-color: #453ead;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+@media screen and (max-width: 900px) {
+
+    body{
+        background-color: rgb(216, 152, 69);
+    }
+   
+    .flex-container {
+    display: flex;
+    background-color: rgb(96, 214, 155);
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.flex-container > div {
+    background-color: #15878f;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+
+}
+@media screen and (max-width:600px){
+    
+    body{
+        background-color: rgb(235, 68, 199);
+    }
+    .flex-container {
+    display: flex;
+    background-color: rgb(123, 94, 255);
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.flex-container > div {
+    background-color: #d4863d;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+}
+  </style>
+
+<body>
+
+  <h1>Bootstrap</h1>
+  <div class="flex-container">
+
+    <div>This text is important.</div>
+    <div>This text indicates luck.</div>
+    <div>This text represents importance.</div>  
+    <div>This text represents live.</div>
+    <div>This text represents love.</div>  
+    <div>Strawberry background laugh.</div>
+    <div>purplee background color.</div>
+    <div>Green background color.</div>
+  </div>
+  <p><b>Resize the browser window to see that the direction changes when the 
+  screen size is 800px wide or smaller.</b></p>
 
 </body>
-
 </html>
